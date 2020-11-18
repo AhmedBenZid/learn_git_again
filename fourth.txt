@@ -1,0 +1,113 @@
+Damix@DESKTOP-A57TATT MINGW64 ~/Desktop/GoMyCode/Work (master)
+$ cd ..
+
+Damix@DESKTOP-A57TATT MINGW64 ~/Desktop/GoMyCode (master)
+$ cd learn_git_again/
+
+Damix@DESKTOP-A57TATT MINGW64 ~/Desktop/GoMyCode/learn_git_again (master)
+$ git init
+Initialized empty Git repository in C:/Users/Damix/Desktop/GoMyCode/learn_git_again/.git/
+
+Damix@DESKTOP-A57TATT MINGW64 ~/Desktop/GoMyCode/learn_git_again (master)
+$ git add third.txt
+
+Damix@DESKTOP-A57TATT MINGW64 ~/Desktop/GoMyCode/learn_git_again (master)
+$ git commit -m "adding third.txt"
+[master (root-commit) 5908b97] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+
+Damix@DESKTOP-A57TATT MINGW64 ~/Desktop/GoMyCode/learn_git_again (master)
+$ git log
+commit 5908b9739e3fde10de4391c83920e73a99fa175d (HEAD -> master)
+Author: Ahmed Ben Zid <ahmedbenzid@live.fr>
+Date:   Wed Nov 18 02:25:30 2020 +0100
+
+    adding third.txt
+
+Damix@DESKTOP-A57TATT MINGW64 ~/Desktop/GoMyCode/learn_git_again (master)
+$ gid add fourth.txt
+bash: gid: command not found
+
+Damix@DESKTOP-A57TATT MINGW64 ~/Desktop/GoMyCode/learn_git_again (master)
+$ git add fourth.txt
+
+Damix@DESKTOP-A57TATT MINGW64 ~/Desktop/GoMyCode/learn_git_again (master)
+$ git commit -m "adding fourth.txt"
+[master 7627ec9] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+
+Damix@DESKTOP-A57TATT MINGW64 ~/Desktop/GoMyCode/learn_git_again (master)
+$ git rm --cached third.txt
+rm 'third.txt'
+
+Damix@DESKTOP-A57TATT MINGW64 ~/Desktop/GoMyCode/learn_git_again (master)
+$ git log
+commit 7627ec90b25d3648285bb239002752e837554682 (HEAD -> master)
+Author: Ahmed Ben Zid <ahmedbenzid@live.fr>
+Date:   Wed Nov 18 02:27:10 2020 +0100
+
+    adding fourth.txt
+
+commit 5908b9739e3fde10de4391c83920e73a99fa175d
+Author: Ahmed Ben Zid <ahmedbenzid@live.fr>
+Date:   Wed Nov 18 02:25:30 2020 +0100
+
+    adding third.txt
+
+Damix@DESKTOP-A57TATT MINGW64 ~/Desktop/GoMyCode/learn_git_again (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    third.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        third.txt
+
+
+Damix@DESKTOP-A57TATT MINGW64 ~/Desktop/GoMyCode/learn_git_again (master)
+$ git co
+commit   config
+
+Damix@DESKTOP-A57TATT MINGW64 ~/Desktop/GoMyCode/learn_git_again (master)
+$ git commit -m "removing third.txt"
+[master f912444] removing third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+
+Damix@DESKTOP-A57TATT MINGW64 ~/Desktop/GoMyCode/learn_git_again (master)
+$ git log
+commit f91244456f51fb6723fd324f5749edee5cb3530c (HEAD -> master)
+Author: Ahmed Ben Zid <ahmedbenzid@live.fr>
+Date:   Wed Nov 18 02:37:44 2020 +0100
+
+    removing third.txt
+
+commit 7627ec90b25d3648285bb239002752e837554682
+Author: Ahmed Ben Zid <ahmedbenzid@live.fr>
+Date:   Wed Nov 18 02:27:10 2020 +0100
+
+    adding fourth.txt
+
+commit 5908b9739e3fde10de4391c83920e73a99fa175d
+Author: Ahmed Ben Zid <ahmedbenzid@live.fr>
+Date:   Wed Nov 18 02:25:30 2020 +0100
+
+    adding third.txt
+
+Damix@DESKTOP-A57TATT MINGW64 ~/Desktop/GoMyCode/learn_git_again (master)
+$ git config --global -e
+
+Damix@DESKTOP-A57TATT MINGW64 ~/Desktop/GoMyCode/learn_git_again (master)
+$ git config --global core.pager cat
+
+Damix@DESKTOP-A57TATT MINGW64 ~/Desktop/GoMyCode/learn_git_again (master)
+$ git config --global -l
+core.editor=code --wait
+core.autocrlf=true
+core.pager=cat
+user.name=Ahmed Ben Zid
+user.email=ahmedbenzid@live.fr
